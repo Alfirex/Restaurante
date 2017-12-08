@@ -1,0 +1,19 @@
+tapas_homepage:
+    path:     /
+    defaults: { _controller: tapasBundle:Default:index }
+
+tapas_crear:
+    path:     /crearTapa
+    defaults: { _controller: tapasBundle:tapas:crearTapa }
+
+tapas_mostrar:
+    path:     /mostrarTapa
+    defaults: { _controller: tapasBundle:tapas:mostrarTapa }
+
+tapas_mostrarId:
+    path:     /mostrarTapaId/{id}
+    defaults: { _controller: tapasBundle:tapas:mostrarTapaId }
+
+tapas_borrar:
+    path:     /borrarTapa/{id}
+    defaults: { _controller: tapasBundle:tapas:borrarTapa }
