@@ -1,4 +1,23 @@
-{% for item in tablaTapas %}
-    {{item.nombre}}
+{% extends '::base2.html.twig' %}
+{% block body %}
+{% for  tapa in tablaTapas %}
+    <div class="left">
+      <h3>{{ tapa.nombre}}</h3>
+    </div>
+    <div class="left star"><img src="images/star_full.png" class="noeffects" alt=""><img src="images/star_full.png" class="noeffects" alt=""><img src="images/star_full.png" class="noeffects" alt=""><img src="images/star_half_full.png" class="noeffects" alt=""><img src="images/star_empty.png" class="noeffects" alt=""></div>
+    <div class="right menu-order"><a class="button" href="{{ path('tapas_mostrarId', {'id': tapa.id  }) }}">Mostrar mas informacion</a></div>
+    <div class="right menu-order"><a class="button" href="{{ path('tapas_borrar', {'id': tapa.id  }) }}">Borrar</a></div>
+    <img src="images/menu/pizza2.jpeg" class="left clear item" width="150" alt="">
+    <p class="left">{{ tapa.descripcion }}</p>
+    <div class="right menu-order"><strong style="color:red; margin-top:150px;">Precio: {{ tapa.precio }}€</strong></div>
+    <div class="border3"></div>
+<style media="screen">
+  f{
+    position: relative;
+    left: 5px;
+    bottom: 0px;
+  }
+</style>
     <hr>
 {% endfor %}
+{% endblock %}

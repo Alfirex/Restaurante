@@ -35,7 +35,7 @@ class tapasController extends Controller
              $mostrar = $repository->find($id);
 
 
-            return $this->render('tapasBundle:Carpeta_Tapas:ultimoInsertadoTapas.html.twig',array('ultimoInsertado' => $mostrar) );
+            return $this->render('tapasBundle:Carpeta_Tapas:ultimoInsertadoTapas.html.twig',array('idTapa' => $mostrar) );
         }
 
         return $this->render('tapasBundle:Carpeta_Tapas:crearTapasFormulario.html.twig',array('formulario' => $form->createView() ));
@@ -80,6 +80,6 @@ class tapasController extends Controller
                    'No se ha encontrado el id : '.$id
                );
            }
-        return $this->render('tapasBundle:Carpeta_Tapas:muestraTodosId.html.twig',array('tapasId' => $tapas ));
+        return $this->render('tapasBundle:Carpeta_Tapas:muestraTodosId.html.twig',array('idTapa' => $tapas ));
     }
 }

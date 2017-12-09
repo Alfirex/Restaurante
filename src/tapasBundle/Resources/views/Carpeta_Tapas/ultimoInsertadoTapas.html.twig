@@ -1,2 +1,8 @@
-
-        <p>Nombre:{{ ultimoInsertado.nombre }}</p>
+{% extends '::base3.html.twig' %}
+{% block titulo %}Tapa Insertada{% endblock %}
+{% block body %}
+  Nombre:{{idTapa.nombre}}<br>
+  Descripcion:{{idTapa.descripcion}}<br>
+  Precio:{{idTapa.precio}}<br>
+  Foto:{{idTapa.foto}}
+{% endblock %}
